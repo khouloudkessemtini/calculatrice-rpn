@@ -1,0 +1,128 @@
+:root{
+  --primary: rgb(11, 14, 16);
+  --secondory: rgb(187, 0, 255);
+  --dark: black;
+  --ligth: #eee;
+}
+
+.colorBlack{
+  color: var(--dark);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+  background-color: var(--ligth);
+}
+
+.App {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 400px;
+  background-color: #FFF;
+border-radius: 16px;
+overflow: hidden;
+box-shadow: 0px 2px 64px black;
+
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  padding: 16px; 
+  text-align: right;
+  background-color: #00000040;
+  color: var(--ligth);
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.display span {
+  font-size: 17px;
+  color: #5d5454;
+}
+
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  color: #FFF;
+  font-size: 20px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.block-btn  {
+  display: flex;
+    flex-wrap: wrap;
+
+}
+.block-btn button {
+  flex: 1 1 33.333%;
+  background-color: var(--dark)
+
+}
+.action  {
+  display: inline-grid;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 28px;
+}
+.action .success {
+  background-color: #0f5223;
+  color: black;
+}
+.action .warning {
+  background-color: #ffb86c;
+  color: black;
+}
+.action .blue {
+  background-color: #0842a0;
+  color: black;
+}
+.action .danger {
+  background-color: #b3261e;
+  color: black;
+}
+
+.info {
+  width: 300px;
+  margin: 28px;
+}
+.info .margin{
+margin-bottom: 20px
+}
+
+.operatorsAnddigits {
+  display: flex;
+}
+
+.custom-alert {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.MuiSnackbar-root.MuiSnackbar-anchorOriginBottomLeft.css-cpgvjg-MuiSnackbar-root {
+  bottom: 500px; 
+  left: 900px; 
+}

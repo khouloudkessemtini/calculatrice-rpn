@@ -1,0 +1,99 @@
+#spring:
+#    devtools:
+#        restart:
+#            enabled: true
+##    datasource:
+##        url: jdbc:sqlserver://172.16.10.10\sql2014;database=Gcliniquedev;encrypt=false;trustServerCertificate=true
+##        username: SA
+##        password: m0dp@$$
+#    datasource:
+#        url: jdbc:h2:mem:testdb   # JDBC URL for H2 in-memory database
+#        driver-class-name: org.h2.Driver
+#        username: sa              # Default username for H2
+#        password:                 # Default password for H2 (leave it blank)
+#
+#    h2:
+#        console:
+#            enabled: true           # Enable H2 console for development
+#            path: /h2-console       # URL path to access H2 console
+#    jpa:
+#        database-platform: org.hibernate.dialect.H2Dialect
+#        open-in-view: false
+#        show-sql: true
+##        hibernate:
+##            ddl-auto: update
+##            naming:
+##                implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+##                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+##        properties:
+##            hibernate.default_schema: demande
+##            hibernate.id.new_generator_mappings: true
+##            hibernate.cache.use_second_level_cache: false
+##            hibernate.cache.use_query_cache: false
+##            hibernate.generate_statistics: false
+##            hibernate.cache.region.factory_class: com.hazelcast.hibernate.HazelcastCacheRegionFactory
+##            hibernate.cache.hazelcast.instance_name: hazelcast
+##            hibernate.cache.use_minimal_puts: true
+##            hibernate.cache.hazelcast.use_lite_member: true
+##            org.hibernate.envers.store_data_at_delete: true
+##    profiles:
+##        include: dev
+#
+#server:
+#    contextPath: /calculatrice-core
+#    port: 9000
+
+#spring:
+#  datasource:
+#    driver-class-name: org.h2.Driver
+#    url: jdbc:h2:mem:testdb
+#    username: sa
+#    password: password
+#  h2:
+#    console:
+#      enabled: true
+#      path: /h2-console
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#    properties:
+#      hibernate:
+#        format_sql: true
+#    show-sql: true
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/calculatrice?createDatabaseIfNotExist=true
+    username: root
+    password: my-secret-pw
+  jpa:
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate.id.new_generator_mappings: true
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: false
+      hibernate.cache.region.factory_class: com.hazelcast.hibernate.HazelcastCacheRegionFactory
+      hibernate.cache.hazelcast.instance_name: hazelcast
+      hibernate.cache.use_minimal_puts: true
+      hibernate.cache.hazelcast.use_lite_member: true
+      org.hibernate.envers.store_data_at_delete: true
+  config:
+    use-legacy-processing: true
+
+
+server:
+  servlet:
+    contextPath: /calculatrice-core
+  port: 9000
